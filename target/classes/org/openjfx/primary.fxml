@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar>
+         <menus>
+            <Menu mnemonicParsing="false" text="Fichier">
+               <items>
+                  <MenuItem fx:id="addFile" mnemonicParsing="false" text="Ajouter un fichier" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Aide">
+               <items>
+                  <MenuItem fx:id="help1" mnemonicParsing="false" text="Informations générales" />
+                  <MenuItem fx:id="help2" mnemonicParsing="false" text="Mon fichier ne charge pas" />
+                  <MenuItem fx:id="help3" mnemonicParsing="false" text="Comment créer un nouveau fichier" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <items>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="chooseSourceFile" layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="295.0" promptText="Fichier PDF" />
+                  <ComboBox fx:id="choosePage" layoutX="14.0" layoutY="81.0" prefHeight="25.0" prefWidth="295.0" promptText="Page" />
+               </children></Pane>
+            <Pane fx:id="paneimg" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="img" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children></Pane>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>
